@@ -89,14 +89,43 @@ class C implements AutoInterface{
     state = 1
 }
 
-interface IA{
-    sample(): void
+class IA{
+    
 }
 
 class Sample implements IA{
+    sampleName: any
+    
     sample(){
 
     }
 }
+
+class Demo implements IA{
+    demoName: any
+    demo(){
+        console.log("demo")
+    }
+}
+
+let num = 1;
+const instance = num > 5 ? new Sample() : new Demo()
+// console.log(instance.sample())
+// const de = instance as Demo
+// console.log(de)
+if(instance instanceof Sample){
+    console.log("===ok===")
+}else{
+    console.log("====no====")
+}
+// (instance as Demo).demo()
 // const flow = new MyFlow()
 // flow.sleep1().sleep2().next();
+
+function isSample(instance: Sample | Demo): instance is Sample{
+    console.log((instance as Sample).sample)
+    // return ((e: never) => {throw new Error(e)})(instance)
+    return (instance as Sample).sample != undefined
+}
+
+console.log('val', isSample(instance))
