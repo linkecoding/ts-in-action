@@ -1,0 +1,28 @@
+{
+    "files": [
+        "src/a.ts"
+    ],
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "src/lib",
+        "build"
+    ],
+    "compilerOptions": {
+        "incremental": true,
+        "diagnostics": true,
+        "tsBuildInfoFile": "./ext/buildFile",
+        // "target": "es5",
+        // // "module": "amd",
+        // // "outFile": "./app.js",
+        // "lib": [
+        //     "dom",
+        //     "ES2015",
+        //     "ES2019.Array",
+        //     "ScriptHost"
+        // ]
+        "allowJs": true,
+        "checkJs": true
+    }
+}
