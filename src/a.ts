@@ -1,4 +1,4 @@
-let s: string = "hello"
+const s = "hello"
 class A {
 
 }

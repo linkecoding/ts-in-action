@@ -1,4 +1,4 @@
-let obj = {
+const obj = {
     a: 1,
     b: 2,
     c: 3,
@@ -21,15 +21,15 @@ interface Obj{
 }
 
 type NewType = keyof Obj
-let key: NewType = 'b';
+const key: NewType = 'b';
 console.log(typeof key)
 
 // 索引访问操作符
 // T[K]
-let value: Obj['a'] = 1
+const value: Obj['a'] = 1
 console.log('value = ', value)
 
-let c = obj['a']
+const c = obj['a']
 console.log('c = ', c)
 // T extends U
 
